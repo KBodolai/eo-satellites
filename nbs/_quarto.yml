@@ -14,7 +14,7 @@ format:
     toc: true
 
 website:
-  title: "eo_satellites"
+  title: "eo-satellites"
   description: "satellite registry"
   execute: 
     enabled: false
