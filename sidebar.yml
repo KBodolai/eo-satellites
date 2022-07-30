@@ -1,0 +1,9 @@
+website:
+  sidebar:
+    contents:
+      - README.md
+      - section: nbs
+        contents:
+          - nbs/index.ipynb
+          - nbs/00_satellite.ipynb
+          - nbs/_01_registry.ipynb
