@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "EO-satellites",
+    "section": "",
+    "text": "there’s an increasing number of earth observing satellites that are used for numerous applications, such as deforestation, agriculture and fishing monitoring, land cover and land use mapping, carbon mapping, and more.\nMany of these satellites provide open data. This is a toy project to easily pull information on these.\nTypes, etc\nIdea: add a database support and functionality to find compatible satellites for combined observation and fusion. Options for a specified monitoring period?"
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "EO-satellites",
+    "section": "Install",
+    "text": "Install\npip install eo-satellites"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "EO-satellites",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "satellite.html",
+    "href": "satellite.html",
+    "title": "satellite",
+    "section": "",
+    "text": "get_attrs\n\n get_attrs (cls)\n\nhelper function to get attributes from a class\n\n\n\n\n\n\n\nSatellite\n\n Satellite (name:str, launch_date:str, sensor_type:str='Multispectral',\n            is_active:bool=False, end_date:str=None, **kwargs)\n\nA class for logging and viewing information about earth observation satellites\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nname\nstr\n\nthe name of the satellite\n\n\nlaunch_date\nstr\n\nthe date of launch (maybe start of operations)\n\n\nsensor_type\nstr\nMultispectral\ntype of sensor (Multispectral, radar, lidar)\n\n\nis_active\nbool\nFalse\nemits its own radiation or not?\n\n\nend_date\nstr\nNone\nif it has one, when it died\n\n\nkwargs\n\n\n\n\n\n\n\n\n\n\ndesc = 'this big boy follows his older brothers, the longest series of multispectral satellites, \\\ncollecting data for over 50 years!'\nlandsat8 = Satellite('Landsat-8', '2013-02-11', 'Mulstispectral', provider='NASA', description=desc)\n\n\nlandsat8.is_active\n\nFalse\n\n\n\nlandsat8\n\nLandsat-8, rocking since 2013-02-11 00:00:00\n\n\n\nlandsat8.info()\n\n        name :  Landsat-8\n launch_date :  2013-02-11 00:00:00\n sensor_type :  Mulstispectral\n   is_active :  False\n    end_date :  None\n    provider :  NASA\n description :  this big boy follows his older brothers, the longest series of multispectral satellites, collecting data for over 50 years!\n\n\n\ntest_eq(type(landsat8.launch_date), datetime)\n\nthis can be a good idea because you can add methods with patch and test them after definition, which is great practice (instead of a big monolith class definition and then a crapload of tests)\n\n@patch\ndef extrainfo(self: Satellite,):\n    print('WOWZA')\n\n\nlandsat8 = Satellite('Landsat-8', '2013-02-11', 'Mulstispectral', provider='NASA', description=desc)\nlandsat8.extrainfo()\n\nWOWZA"
+  }
+]
